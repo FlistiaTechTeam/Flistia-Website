@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Define your design tokens using the @theme directive */
+@theme {
+    /* Colors */
+    --color-btn-primary: #AD0300;      /* Button primary background */
+    --color-btn-light: #D70300;        /* Light button text color */
+    --color-btn-hover: #8C0200;        /* Button hover background (example value) */
+  
+    /* Neutral colors for headings (if you need multiple, you can define variations) */
+    --color-heading-1: #AD0300;
+    --color-heading-2: #800020;
+    --color-heading-3: #111827;
+  
+    --color-paragraph: #444444;        /* For paragraph text */
+    --color-separator: #F4F4F4;        /* For section separators */
+    --color-placeholder: #A2A2A2;      /* For input placeholder text */
+    --color-navbar: #D9D9D9;           /* For the navbar background */
+  
+    /* Linear gradient from primary to a darker tone */
+    --gradient-primary: linear-gradient(90deg, #AD0300, #590100);
+  
+    /* Typography */
+    --font-poppins: 'Poppins', sans-serif;
+  
+    /* Font sizes */
+    --text-title: 4rem;         /* 64px for main titles */
+    --text-card-heading: 2.5rem; /* 40px for card headings */
+    --text-paragraph: 1rem;      /* 16px for paragraph text */
+  }
