@@ -6,15 +6,19 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 
+import Container from "@mui/material/Container";
+
 function AppLayout() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navbar />
-      <Box component="main" sx={{ mt: 8 }}>
-        <Outlet />
-      </Box>
-      <Footer />
+      <Container maxWidth="lg">
+        <Navbar />
+        <Box component="main" sx={{ mt: 8 }}>
+          <Outlet />
+        </Box>
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 }

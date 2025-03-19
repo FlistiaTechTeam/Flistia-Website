@@ -76,8 +76,8 @@ function Navbar(props) {
         sx={{ bgcolor: "var(--color-navbar)" }}
         position="fixed"
       >
-        <Container maxWidth="xl">
-          <Toolbar className="flex justify-between items-center">
+        <Container maxWidth="lg">
+          <Toolbar className="flex justify-between items-center !px-0">
             <IconButton
               color="inherit"
               aria-label="open drawer"
