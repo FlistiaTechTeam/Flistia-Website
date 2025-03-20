@@ -12,7 +12,6 @@ const theme = createTheme({
       main: "#444444", // Paragraph text
     },
     background: {
-      default: "#F4F4F4", // Section separators
       paper: "#ffffff", // Default card background
     },
     text: {

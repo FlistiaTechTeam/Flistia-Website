@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Define your design tokens using the @theme directive */
 @theme {
     /* Colors */
@@ -26,5 +30,6 @@
     /* Font sizes */
     --text-title: 4rem;         /* 64px for main titles */
     --text-card-heading: 2.5rem; /* 40px for card headings */
+    --text-subtitle: 1.25rem;     /* 20px for subtitles */
     --text-paragraph: 1rem;      /* 16px for paragraph text */
   }
