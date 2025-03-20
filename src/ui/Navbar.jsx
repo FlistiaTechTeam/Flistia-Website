@@ -69,68 +69,70 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar
-        component="nav"
-        sx={{ bgcolor: "var(--color-navbar)" }}
-        position="fixed"
-      >
-        <Container maxWidth="lg">
-          <Toolbar className="flex justify-between items-center !px-0">
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon sx={{ color: "var(--color-heading-3)" }} />
-            </IconButton>
-            <Box sx={{ width: "65px" }}>
-              <img src={coreLogo} alt="Core Logo" />
-            </Box>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button
-                  key={item}
-                  className="!text-base"
-                  sx={{
-                    textTransform: "none",
-                    mx: 1.5,
-                    color: "var(--color-heading-3)",
-                  }}
-                >
-                  <Link to={`/${item.toLowerCase().replace(" ", "-")}`}>
-                    {item}
-                  </Link>
-                </Button>
-              ))}
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
+    <Container maxWidth="lg">
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <AppBar
+          component="nav"
+          sx={{ bgcolor: "var(--color-navbar)" }}
+          position="fixed"
         >
-          {drawer}
-        </Drawer>
-      </nav>
-    </Box>
+          <Container maxWidth="lg">
+            <Toolbar className="flex justify-between items-center !px-0">
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: "none" } }}
+              >
+                <MenuIcon sx={{ color: "var(--color-heading-3)" }} />
+              </IconButton>
+              <Box sx={{ width: "65px" }}>
+                <img src={coreLogo} alt="Core Logo" />
+              </Box>
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                {navItems.map((item) => (
+                  <Button
+                    key={item}
+                    className="!text-base"
+                    sx={{
+                      textTransform: "none",
+                      mx: 1.5,
+                      color: "var(--color-heading-3)",
+                    }}
+                  >
+                    <Link to={`/${item.toLowerCase().replace(" ", "-")}`}>
+                      {item}
+                    </Link>
+                  </Button>
+                ))}
+              </Box>
+            </Toolbar>
+          </Container>
+        </AppBar>
+        <nav>
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: "block", sm: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+              },
+            }}
+          >
+            {drawer}
+          </Drawer>
+        </nav>
+      </Box>
+    </Container>
   );
 }
 
