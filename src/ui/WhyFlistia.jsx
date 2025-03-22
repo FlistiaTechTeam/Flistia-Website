@@ -6,7 +6,10 @@ import Button from "./Button";
 import { Link } from "react-router-dom";
 function WhyFlistia() {
   return (
-    <section className="why-flistia bg-separator -top-16 relative py-10">
+    <section
+      id="why-flistia"
+      className="why-flistia bg-separator -top-16 relative py-10"
+    >
       <Container maxWidth="lg">
         <h2 className="section-title py-8 text-center md:text-left">
           Why <span>Flistia</span>
