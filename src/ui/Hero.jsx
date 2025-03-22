@@ -6,6 +6,12 @@ import MoonSlice from "../assets/images/hero-section/moon-slice.svg";
 import RocketImage from "../assets/images/hero-section/rocket.svg";
 import BroadcastImage from "../assets/images/hero-section/broadcast.svg";
 function Hero() {
+  const scrollToElement = () => {
+    const element = document.getElementById("why-flistia");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="hero h-screen">
       <img
@@ -35,7 +41,10 @@ function Hero() {
             <Link to="/contact-us">
               <Button>Contact Us</Button>
             </Link>
-            <IconButton className="drop-down m-auto w-fit animate-bounce">
+            <IconButton
+              onClick={scrollToElement}
+              className="drop-down m-auto w-fit animate-bounce"
+            >
               <img className="w-6 h-6" src={dropDown} alt="" />
             </IconButton>
           </div>
