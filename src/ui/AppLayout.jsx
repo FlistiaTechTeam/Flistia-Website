@@ -12,13 +12,11 @@ function AppLayout() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Navbar />
-        <Box component="main" sx={{ mt: 8 }}>
-          <Outlet />
-        </Box>
-        <Footer />
-      </Container>
+      <Navbar />
+      <Box component="main" sx={{ mt: 8 }}>
+        <Outlet />
+      </Box>
+      <Footer />
     </ThemeProvider>
   );
 }

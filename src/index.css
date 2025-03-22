@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+*{
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
 /* Define your design tokens using the @theme directive */
 @theme {
     /* Colors */
@@ -26,5 +31,55 @@
     /* Font sizes */
     --text-title: 4rem;         /* 64px for main titles */
     --text-card-heading: 2.5rem; /* 40px for card headings */
+    --text-subtitle: 1.25rem;     /* 20px for subtitles */
     --text-paragraph: 1rem;      /* 16px for paragraph text */
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 1s ease-in-out forwards;
+  }
+
+  @keyframes diagonalEntry {
+    0% {
+      /* Start off-screen: adjust these values based on your layout */
+      transform: translate(-150%, -150%);
+      opacity: 0;
+    }
+    100% {
+      /* End at its final on-screen position */
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  .rocket {
+    animation: diagonalEntry 1.5s cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+  }
+
+  @keyframes diagonalEntry2 {
+    0% {
+      /* Start off-screen: adjust these values based on your layout */
+      transform: translate(-150%, 150%);
+      opacity: 0;
+    }
+    100% {
+      /* End at its final on-screen position */
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  .broadcast {
+    animation: diagonalEntry2 2s cubic-bezier(0.0, 0.2, 0.5, 1) forwards;
   }
