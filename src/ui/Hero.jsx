@@ -28,11 +28,11 @@ function Hero() {
       <Container maxWidth="lg">
         <div className="hero-body flex flex-col justify-between items-center pt-15 gap-10 md:pt-20 px-5">
           <div className="hero-content text-center slide-in sm:w-1/2 lg:w-auto">
-            <h1 className="title font-bold text-5xl max-w-3xl leading-12 sm:leading-15 lg:leading-20 lg:text-6xl">
+            <h1 className="title font-semibold text-5xl max-w-3xl leading-12 sm:leading-15 lg:leading-20 lg:text-6xl">
               Your Story Our Strategy{" "}
               <span className="text-heading-1 ">Your Success</span>
             </h1>
-            <p className="text-sm font-semibold text-paragraph max-w-lg mx-auto mt-8 lg:text-subtitle">
+            <p className="text-sm text-paragraph max-w-lg mx-auto mt-8 lg:text-subtitle">
               Affordable, innovative marketing solutions tailored to small
               businesses and startups.
             </p>
