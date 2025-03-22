@@ -5,6 +5,43 @@
   box-sizing: border-box;
 }
 
+/* globals */
+.section-title{
+  font-size: var(--text-title);
+  color: var(--color-heading-3);
+  font-weight: 600;
+}
+
+.section-title span{
+  color: var(--color-heading-2);
+}
+
+.why-flistia .card {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;  /* Transition on the transform property */
+  position: relative;
+  overflow: hidden;
+}
+
+.why-flistia .card::before{
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: -25px;
+  width: 7rem;
+  height: 1rem;
+  background-color: var(--color-btn-primary);
+  transform: rotate(45deg);
+}
+
+.why-flistia .card:hover {
+  transform: translateY(-8px);  /* Move the card up */
+}
+
+.why-flistia .card .card-icon{
+  width: 5.25rem;
+}
+
 /* Define your design tokens using the @theme directive */
 @theme {
     /* Colors */
@@ -29,8 +66,8 @@
     --font-poppins: 'Poppins', sans-serif;
   
     /* Font sizes */
-    --text-title: 4rem;         /* 64px for main titles */
-    --text-card-heading: 2.5rem; /* 40px for card headings */
+    --text-title: 3rem;         /* 64px for main titles */
+    --text-card-heading: 2rem; /* 40px for card headings */
     --text-subtitle: 1.25rem;     /* 20px for subtitles */
     --text-paragraph: 1rem;      /* 16px for paragraph text */
   }
