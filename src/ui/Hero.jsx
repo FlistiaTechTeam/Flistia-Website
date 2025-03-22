@@ -2,17 +2,23 @@ import { IconButton, Container } from "@mui/material";
 import dropDown from "../assets/images/hero-section/drop-down.svg";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import HeroImage from "../assets/images/hero-section/hero-background.svg";
+import MoonSlice from "../assets/images/hero-section/moon-slice.svg";
+import RocketImage from "../assets/images/hero-section/rocket.svg";
+import BroadcastImage from "../assets/images/hero-section/broadcast.svg";
 function Hero() {
   return (
-    <section
-      className="hero h-screen px-4"
-      style={{
-        backgroundImage: `url(${HeroImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="hero h-screen">
+      <img
+        src={RocketImage}
+        alt=""
+        className="absolute rocket left-0 w-60 bottom-60 sm:w-md lg:top-15 lg:w-lg"
+      />
+      <img
+        src={BroadcastImage}
+        alt=""
+        className="absolute broadcast right-5 -bottom-13 w-54 sm:w-80 lg:right-15 lg:w-sm"
+      />
+      <img src={MoonSlice} alt="" className="absolute bottom-0 w-full " />
       <Container maxWidth="lg">
         <div className="hero-body flex flex-col justify-between items-center md:pt-20 pt-10 gap-10">
           <div className="hero-content text-center">
