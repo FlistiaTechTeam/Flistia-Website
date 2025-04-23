@@ -5,11 +5,11 @@ import { Container } from "@mui/material";
 
 function StillHere() {
   return (
-    <section id="still-here" className="still-here relative py-8">
+    <section id="still-here" className="still-here relative pt-8">
       <Container maxWidth="lg">
-        <section className="flex flex-col md:flex-row justify-between">
+        <section className="flex flex-col xl:flex-row justify-between text-center xl:text-left gap-10">
           <div className="info flex flex-col">
-            <h3 className="section-title text-center md:text-left ">
+            <h3 className="section-title text-center xl:text-left ">
               You're still here!
             </h3>
             <p className="semi-bold text-card-paragraph pb-4">
@@ -22,8 +22,12 @@ function StillHere() {
               </Button>
             </Link>
           </div>
-          <div className="image">
-            <img src={image} alt="still-here" />
+          <div className="image self-center xl:self-start">
+            <img
+              className="-bottom-[2px] relative"
+              src={image}
+              alt="still-here"
+            />
           </div>
         </section>
       </Container>
