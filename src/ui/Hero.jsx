@@ -24,7 +24,11 @@ function Hero() {
         alt=""
         className="absolute broadcast right-5 -bottom-13 w-54 sm:w-80 lg:right-15 lg:w-sm"
       />
-      <img src={MoonSlice} alt="" className="absolute bottom-0 w-full " />
+      <img
+        src={MoonSlice}
+        alt=""
+        className="absolute -bottom-5 w-full sm:bottom-0"
+      />
       <Container maxWidth="lg">
         <div className="hero-body flex flex-col justify-between items-center pt-15 gap-10 md:pt-20 px-5">
           <div className="hero-content text-center slide-in sm:w-1/2 lg:w-auto">

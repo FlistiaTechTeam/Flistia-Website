@@ -6,9 +6,9 @@ import Button from "./Button";
 import { Link } from "react-router-dom";
 function OurServices() {
   return (
-    <section id="our-services" className="our-services -top-16 relative py-10">
+    <section id="our-services" className="our-services -top-16 relative py-8">
       <Container maxWidth="lg">
-        <h2 className="section-title py-8 text-center md:text-left">
+        <h2 className="section-title text-center md:text-left">
           Our <span>Services</span>
         </h2>
         <div className="cards grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 px-5 sm:px-10 md:px-20">
