@@ -8,10 +8,10 @@ function ClientsFeedback() {
   return (
     <section
       id="clients-feedback"
-      className="clients-feedback bg-separator -top-16 relative py-8 overflow-hidden"
+      className="clients-feedback bg-separator  relative py-8 overflow-hidden"
     >
       <Container maxWidth="lg">
-        <h2 className="section-title text-center md:text-left">
+        <h2 className="pb-4 section-title text-center md:text-left">
           Clients <span>Feedback</span>
         </h2>
         <section>
