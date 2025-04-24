@@ -11,14 +11,22 @@ function Footer() {
   return (
     <footer className="footer bg-btn-primary pt-10 text-white">
       <Container maxWidth="lg" className="mb-10">
-        <section className="flex justify-between items-start flex-col md:flex-row">
-          <div className="logo">
-            <img src={logo} alt="logo" />
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="logo flex flex-col items-center md:items-start">
+            <img src={logo} alt="logo" className="mb-4" />
+            <div className="contact-us flex flex-col gap-2 text-center md:text-left">
+              <p className="phone flex items-center gap-2 justify-center md:justify-start">
+                <img src={phone} alt="phone" /> +970 594 269 418
+              </p>
+              <p className="email flex items-center gap-2 justify-center md:justify-start">
+                <img src={email} alt="email" /> info@flistia.com
+              </p>
+            </div>
           </div>
-          <div className="social">
+          <div className="social text-center md:text-left">
             <h3 className="text-lg font-bold mb-4">Follow Us</h3>
             <ul className="flex flex-col gap-2">
-              <li className="flex items-center gap-2 hover:underline">
+              <li className="flex items-center gap-2 hover:underline justify-center md:justify-start">
                 <img src={facebook} alt="facebook" />
                 <a
                   target="_blank"
@@ -27,13 +35,13 @@ function Footer() {
                   Facebook
                 </a>
               </li>
-              <li className="flex items-center gap-2 hover:underline">
+              <li className="flex items-center gap-2 hover:underline justify-center md:justify-start">
                 <img src={instagram} alt="instagram" />
                 <a target="_blank" href="https://www.instagram.com/flistia.ps/">
                   Instagram
                 </a>
               </li>
-              <li className="flex items-center gap-2 hover:underline">
+              <li className="flex items-center gap-2 hover:underline justify-center md:justify-start">
                 <img src={linkedin} alt="linkedin" />
                 <a
                   target="_blank"
@@ -44,7 +52,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="links">
+          <div className="links text-center md:text-left">
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="flex flex-col gap-2">
               <li className="hover:underline">
@@ -60,15 +68,6 @@ function Footer() {
                 <Link to="/services">Our Services</Link>
               </li>
             </ul>
-          </div>
-          <div className="contact-us flex flex-col gap-2">
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <p className="phone flex items-center gap-2">
-              <img src={phone} alt="phone" /> +970 594 269 418
-            </p>
-            <p className="email flex items-center gap-2">
-              <img src={email} alt="email" /> info@flistia.com
-            </p>
           </div>
         </section>
       </Container>

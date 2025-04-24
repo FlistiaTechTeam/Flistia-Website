@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Star } from "lucide-react";
 function FeedbackCard({ feedback }) {
   return (
-    <div className="relative bg-white shadow-lg rounded-2xl p-6 max-w-lg mx-auto">
+    <div className="relative bg-white shadow-lg rounded-2xl p-6 max-w-lg mx-auto overflow-visible">
       <div className="absolute -top-6 -left-6 w-16 h-16 bg-red-100 rounded-full opacity-50" />
       <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-red-100 rounded-full opacity-30" />
 
