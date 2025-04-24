@@ -22,19 +22,32 @@ const clientLogos = [
     logo: logo,
   },
 ];
+
 function LogoMarquee() {
   return (
     <div className="overflow-hidden py-4">
-      <div className="flex animate-marquee whitespace-nowrap gap-2.5">
+      <div className="animate-marquee">
         {clientLogos.map((logoObj) => (
           <div
             key={logoObj.id}
-            className="flex items-center px-15 py-10 bg-white rounded-[10px]"
+            className="flex items-center justify-center min-w-[200px] h-[90px] bg-white rounded-[8px] mx-2"
           >
             <img
               src={logoObj.logo}
               alt="client logo"
-              className="h-[70px] object-contain"
+              className="h-[70px] w-[70px] object-contain"
+            />
+          </div>
+        ))}
+        {clientLogos.map((logoObj) => (
+          <div
+            key={`duplicate-${logoObj.id}`}
+            className="flex items-center justify-center min-w-[200px] h-[90px] bg-white rounded-[8px] mx-2"
+          >
+            <img
+              src={logoObj.logo}
+              alt="client logo"
+              className="h-[70px] w-[70px] object-contain"
             />
           </div>
         ))}
