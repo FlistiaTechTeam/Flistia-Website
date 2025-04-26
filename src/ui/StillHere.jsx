@@ -13,11 +13,15 @@ function StillHere() {
               You're still here!
             </h3>
             <p className="semi-bold text-card-paragraph pb-4">
-              Don’t let your Success go the way of the
+              Don't let your Success go the way of the
               <br /> dinosaurs. get started now!
             </p>
             <Link to="/services">
-              <Button size="small" className="w-auto">
+              <Button
+                size="small"
+                className="w-auto"
+                aria-label="Explore Flistia's services"
+              >
                 Checkout Our Services!
               </Button>
             </Link>

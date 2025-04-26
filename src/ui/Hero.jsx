@@ -59,7 +59,7 @@ const Hero = memo(function Hero() {
           </div>
           <div className="hero-cta flex flex-col justify-center items-center gap-10 z-1">
             <Link to="/contact-us">
-              <Button>Contact Us</Button>
+              <Button aria-label="Contact Flistia">Contact Us</Button>
             </Link>
             <IconButton
               onClick={scrollToElement}
