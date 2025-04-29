@@ -182,3 +182,39 @@
   .animate-marquee:hover {
     animation-play-state: paused;
   }
+
+  /* Phone Input Styles */
+  .phone-input-wrapper {
+    width: 100%;
+  }
+
+  .phone-input-container {
+    width: 100% !important;
+  }
+
+  .phone-input-container .form-control {
+    width: 100% !important;
+    height: 52px !important;
+  }
+
+  .phone-input-container .flag-dropdown {
+    border-radius: 8px 0 0 8px !important;
+    height: 52px !important;
+  }
+
+  .phone-input-container .selected-flag {
+    height: 52px !important;
+    padding: 0 8px 0 12px !important;
+  }
+
+  .phone-input-container .country-list {
+    width: 300px !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+  }
+
+  @media (max-width: 640px) {
+    .phone-input-container .country-list {
+      width: 100% !important;
+    }
+  }

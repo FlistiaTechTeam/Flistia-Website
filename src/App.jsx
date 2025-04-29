@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import AppLayout from "./ui/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
+import { Toaster } from "react-hot-toast";
 
 // Error Boundary Component
 class ErrorBoundary extends React.Component {
@@ -37,6 +38,18 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 function App() {
   return (
     <BrowserRouter>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: "white",
+            color: "black",
+            padding: "16px",
+            borderRadius: "8px",
+          },
+        }}
+      />
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<Navigate replace to="/home" />} />
