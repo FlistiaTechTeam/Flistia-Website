@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useState } from "react";
 import contactImage from "../assets/images/contact-us/contact-image.svg";
+import emailIcon from "../assets/images/footer/gmail.svg";
+import phoneIcon from "../assets/images/footer/phone.svg";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -49,7 +51,9 @@ function ContactUs() {
     <div className="min-h-screen bg-separator py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-5">
-          <h1 className="text-5xl font-bold text-heading-2 mb-4">Contact Us</h1>
+          <h1 className="text-5xl font-semibold mb-4">
+            Contact <span className="text-heading-2">Us!</span>
+          </h1>
           <p className="text-xl text-paragraph">Get in touch with our team</p>
         </div>
 
@@ -185,25 +189,25 @@ function ContactUs() {
             </div>
             <div className="space-y-8">
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-[#AD0300] bg-opacity-10 rounded-full">
-                  {/* <img src={phoneIcon} alt="Phone" /> */}
+                <div className="p-3 bg-heading-1 bg-opacity-10 rounded-full">
+                  <img src={phoneIcon} alt="Phone" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#111827]">
                     Phone
                   </h3>
-                  <p className="text-lg text-[#444444]">+1 (555) 123-4567</p>
+                  <p className="text-lg text-[#444444]">+972 59-426-9417</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-[#AD0300] bg-opacity-10 rounded-full">
-                  {/* <img src={emailIcon} alt="Email" /> */}
+                <div className="p-3 bg-heading-1 rounded-full">
+                  <img src={emailIcon} alt="Email" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-[#111827]">
                     Email
                   </h3>
-                  <p className="text-lg text-[#444444]">contact@flistia.com</p>
+                  <p className="text-lg text-[#444444]">info@flistia.com</p>
                 </div>
               </div>
             </div>
