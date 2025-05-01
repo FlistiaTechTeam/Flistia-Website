@@ -1,22 +1,108 @@
+import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import AppLayout from "./ui/AppLayout";
-import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
-import Services from "./pages/Services";
-import OurWork from "./pages/OurWork";
-import ContactUs from "./pages/ContactUs";
 import PageNotFound from "./pages/PageNotFound";
+import { Toaster } from "react-hot-toast";
+
+// Error Boundary Component
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("Error caught by boundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong. Please try refreshing the page.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+// Lazy load components
+const Home = lazy(() => import("./pages/Home"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Services = lazy(() => import("./pages/Services"));
+const OurWork = lazy(() => import("./pages/OurWork"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+
 function App() {
   return (
     <BrowserRouter>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: "white",
+            color: "black",
+            padding: "16px",
+            borderRadius: "8px",
+          },
+        }}
+      />
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<Navigate replace to="/home" />} />
-          <Route path="home" element={<Home />} />
-          <Route path="about-us" element={<AboutUs />} />
-          <Route path="services" element={<Services />} />
-          <Route path="our-work" element={<OurWork />} />
-          <Route path="contact-us" element={<ContactUs />} />
+          <Route
+            path="home"
+            element={
+              <ErrorBoundary>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Home />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
+          <Route
+            path="about-us"
+            element={
+              <ErrorBoundary>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <AboutUs />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
+          <Route
+            path="services"
+            element={
+              <ErrorBoundary>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Services />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
+          <Route
+            path="our-work"
+            element={
+              <ErrorBoundary>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <OurWork />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
+          <Route
+            path="contact-us"
+            element={
+              <ErrorBoundary>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <ContactUs />
+                </Suspense>
+              </ErrorBoundary>
+            }
+          />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

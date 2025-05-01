@@ -20,7 +20,9 @@ function ClientsFeedback() {
         </section>
         <div className="text-center">
           <Link to="/our-work">
-            <Button>Checkout Our Work!</Button>
+            <Button aria-label="View Flistia's portfolio and work examples">
+              Checkout Our Work!
+            </Button>
           </Link>
         </div>
       </Container>

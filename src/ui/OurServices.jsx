@@ -22,7 +22,12 @@ function OurServices() {
                 Social media management, content creation, SEO, email marketing,
                 and storytelling campaigns
               </p>
-              <Button size="small">Learn More</Button>
+              <Button
+                size="small"
+                aria-label="Learn more about Marketing services"
+              >
+                Learn More
+              </Button>
             </div>
           </div>{" "}
           <div className="card bg-white  rounded-lg flex flex-col">
@@ -35,7 +40,12 @@ function OurServices() {
                 video production, photography, graphic design, digital content
                 production, post-production
               </p>
-              <Button size="small">Learn More</Button>
+              <Button
+                size="small"
+                aria-label="Learn more about Production services"
+              >
+                Learn More
+              </Button>
             </div>
           </div>{" "}
           <div className="card bg-white rounded-lg flex flex-col">
@@ -48,13 +58,20 @@ function OurServices() {
             </div>
             <div className="card-paragraph text-card-paragraph">
               <p>Marketing strategy</p>
-              <Button size="small">Learn More</Button>
+              <Button
+                size="small"
+                aria-label="Learn more about Consultation services"
+              >
+                Learn More
+              </Button>
             </div>
           </div>
         </div>
         <div className="text-center mt-15">
           <Link to="/services">
-            <Button>Explore Our Services</Button>
+            <Button aria-label="Explore all Flistia services">
+              Explore Our Services
+            </Button>
           </Link>
         </div>
       </Container>

@@ -83,7 +83,7 @@ function Navbar(props) {
             <Toolbar className="flex justify-between items-center !px-0">
               <IconButton
                 color="inherit"
-                aria-label="open drawer"
+                aria-label="open navigation menu"
                 edge="start"
                 onClick={handleDrawerToggle}
                 sx={{ mr: 2, display: { sm: "none" } }}
@@ -100,10 +100,13 @@ function Navbar(props) {
                   <Button
                     key={item}
                     className="!text-base"
+                    aria-label={`Navigate to ${item}`}
                     sx={{
                       textTransform: "none",
                       mx: 1.5,
                       color: "var(--color-heading-3)",
+                      minHeight: "44px", // Ensure touch target size
+                      minWidth: "44px", // Ensure touch target size
                     }}
                   >
                     <Link to={`/${item.toLowerCase().replace(" ", "-")}`}>

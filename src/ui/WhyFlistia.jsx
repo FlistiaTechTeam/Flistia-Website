@@ -49,7 +49,9 @@ function WhyFlistia() {
         </div>
         <div className="text-center mt-15">
           <Link to="/about-us">
-            <Button>Who We Are?</Button>
+            <Button aria-label="Learn more about Flistia team">
+              Who We Are?
+            </Button>
           </Link>
         </div>
       </Container>

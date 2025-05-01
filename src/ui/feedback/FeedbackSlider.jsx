@@ -118,12 +118,14 @@ function FeedbackSlider() {
         <button
           onClick={prev}
           className="absolute -left-10 top-1/2 -translate-y-1/2 p-3 hidden sm:block"
+          aria-label="Previous testimonial"
         >
           <ChevronLeft className="text-gray-500 hover:text-black transition hover:cursor-pointer size-10" />
         </button>
         <button
           onClick={next}
           className="absolute -right-10 top-1/2 -translate-y-1/2 p-3 hidden sm:block"
+          aria-label="Next testimonial"
         >
           <ChevronRight className="text-gray-500 hover:text-black transition hover:cursor-pointer size-10" />
         </button>
