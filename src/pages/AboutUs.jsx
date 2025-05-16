@@ -1,7 +1,8 @@
+import Hero from "../ui/about-us/hero";
 function AboutUs() {
   return (
     <div>
-      <h1>About Us</h1>
+      <Hero />
     </div>
   );
 }
