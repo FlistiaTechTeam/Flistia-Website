@@ -33,14 +33,24 @@ function ContactUs() {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      // Here you would typically send the data to your backend
-      console.log("Form data:", data);
-      toast.success(
-        "Thank you for contacting us! We will get back to you soon."
-      );
-      reset();
+      const response = await fetch("http://localhost:5000/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success(
+          "Thank you for contacting us! We will get back to you soon."
+        );
+        reset();
+      } else {
+        throw new Error("Failed to send email");
+      }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
