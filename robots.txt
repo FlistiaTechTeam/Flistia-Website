@@ -1,16 +1,18 @@
+
 # robots.txt for flistia.com
 
-# Allow all crawlers
-User-agent: *
-Allow: /
-
-# Sitemap location
+Host: flistia.com
 Sitemap: https://flistia.com/sitemap.xml
 
-# Disallow admin and private areas
+# Public pages — everything except admin, private, API
+User-agent: *
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
+Crawl-delay: 10
 
-# Crawl-delay for all bots
-Crawl-delay: 10 
+# Google-specific tweak
+User-agent: Googlebot
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 1

@@ -19,30 +19,42 @@ export default defineConfig({
   ],
   base: "/",
   build: {
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ["console.log", "console.info", "console.debug"],
-      },
+    minify: "esbuild",
+    // terserOptions: {
+    //   compress: {
+    //     drop_console: true,
+    //     drop_debugger: true,
+    //     pure_funcs: ["console.log", "console.info", "console.debug"],
+    //   },
+    // },
+    esbuild: {
+      drop: ["console", "debugger"],
+      pure: ["console.log", "console.info", "console.debug"],
     },
     rollupOptions: {
       output: {
         manualChunks: {
+          // “vendor” suitcase: React and friends
           vendor: ["react", "react-dom", "react-router-dom"],
+
+          // “mui” suitcase: Material UI
           mui: ["@mui/material", "@mui/icons-material"],
+
+          // “framer” suitcase: Framer Motion
           framer: ["framer-motion"],
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 200,
     sourcemap: false,
   },
   server: {
-    hmr: true,
-    headers: {
-      "Cache-Control": "public, max-age=31536000, immutable",
+    host: "0.0.0.0", // must match your URL
+    // this port is initial and can be changed by vite if it is already in use
+    port: 5173,
+    hmr: {
+      protocol: "ws", // or 'wss' if using HTTPS
+      host: "0.0.0.0",
     },
   },
   optimizeDeps: {
