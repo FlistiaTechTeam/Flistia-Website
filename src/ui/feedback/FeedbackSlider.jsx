@@ -3,28 +3,27 @@ import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import FeedbackCard from "./FeedbackCard";
-import logo from "../../assets/images/clients/default_avatar.png";
 import clsx from "clsx";
 
 const feedbacks = [
   {
     id: 1,
     name: "Alice Johnson",
-    logo: logo,
+    logo: "../../assets/images/clients/default_avatar.png",
     rating: 5,
     text: "Fantastic experience! Highly recommend their services.",
   },
   {
     id: 2,
     name: "Mark Chen",
-    logo: logo,
+    logo: "../../assets/images/clients/default_avatar.png",
     rating: 4,
     text: "Great work, timely delivery and responsive team!",
   },
   {
     id: 3,
     name: "Luna Patel",
-    logo: logo,
+    logo: "../../assets/images/clients/default_avatar.png",
     rating: 5,
     text: "We loved the collaboration. The results exceeded expectations!",
   },
