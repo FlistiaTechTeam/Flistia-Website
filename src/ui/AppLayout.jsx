@@ -20,7 +20,6 @@ function AppLayout() {
       <Box
         component="main"
         sx={{
-          mt: 8,
           minHeight: "calc(100vh - 400px)", // Account for footer height
           position: "relative",
           zIndex: 1,
